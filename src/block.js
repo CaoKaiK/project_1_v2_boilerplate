@@ -76,7 +76,7 @@ class Block {
             if (self.height != 0) {
                 resolve(parsedBody)
             } else {
-                reject(new Error('Genisis Block'))
+                reject(new Error('Genesis Block'))
             }
         });
     }
