@@ -135,7 +135,7 @@ class Blockchain {
                 await this._addBlock(block)
                 resolve(block)
             } else {
-                reject(new Error('Timeout or invalid verification'))
+                resolve(new Error('Timeout or invalid verification'))
             }
 
         });
@@ -167,7 +167,7 @@ class Blockchain {
     getBlockByHeight(height) {
         let self = this;
         return new Promise((resolve, reject) => {
-            let block = self.chain.filter(p => p.height === height)[0];
+            let block = self.chain.filter(p => p.height === height)[0]
             if(block){
                 resolve(block);
             } else {
@@ -191,7 +191,7 @@ class Blockchain {
             if (stars){
                 resolve(stars)
             } else {
-                resolve([])
+                resolve(stars)
             }
         });
     }
