@@ -37,8 +37,8 @@ class ApplicationServer {
 
 	initExpressMiddleWare() {
 		this.app.use(morgan("dev"));
-		this.app.use(bodyParser.urlencoded({extended:true}));
-		this.app.use(bodyParser.json());
+		this.app.use(express.urlencoded({extended:true}));
+		this.app.use(express.json());
 	}
 
 	initControllers() {
