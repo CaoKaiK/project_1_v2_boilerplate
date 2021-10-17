@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "4233239b-5421-4ae1-993e-3e2e16752091",
+		"name": "Blockchain Developer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getBlockbyHeight",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/block/height/2",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"block",
+						"height",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "requestValidation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\": \"1HZwkjkeaoZfTSaJxDw6aKkxp45agDiEzN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/requestValidation",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"requestValidation"
+					],
+					"query": [
+						{
+							"key": "address",
+							"value": "bc1qs6ed4xtwp2pmycr3797lnjndhfy8galgwyhyqe",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "submitStar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\": \"1HZwkjkeaoZfTSaJxDw6aKkxp45agDiEzN\",\r\n    \"signature\": \"HKUGExzSZh6PgVhgHwEVtsg+E5RrKSWgw/kECQtM67nX//RU6erKVRMdQ4AShYjAtwRO/WhTjMYohwg+4cw0S6I=\",\r\n    \"message\": \"1HZwkjkeaoZfTSaJxDw6aKkxp45agDiEzN:1634464236:starRegistry\",\r\n    \"star\": \"Second Star\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/submitstar",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"submitstar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBlockbyAddress",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/blocks/1HZwkjkeaoZfTSaJxDw6aKkxp45agDiEzN",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"blocks",
+						"1HZwkjkeaoZfTSaJxDw6aKkxp45agDiEzN"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBlockbyHash",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/block/hash/304389bbfd71368b3f34823f89a88d226d81fa0324dc0c84e8ded8ead1dd44b3",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"block",
+						"hash",
+						"304389bbfd71368b3f34823f89a88d226d81fa0324dc0c84e8ded8ead1dd44b3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080"
+		}
+	]
+}

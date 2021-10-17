@@ -99,6 +99,7 @@ class BlockchainController {
     // This endpoint allows you to request the list of Stars registered by an owner
     getStarsByOwner() {
         this.app.get("/blocks/:address", async (req, res) => {
+            console.log(req.params.address)
             if(req.params.address) {
                 const address = req.params.address;
                 try {
